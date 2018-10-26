@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Jura" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="styles/sections.css">
+		<link rel="stylesheet" href="styles/sidenav.css">
+
+		<!-- Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+		<!--link rel="icon" type="image/png" href="assets/ex.png" /-->
+		<link rel="shortcut icon" href="assets/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+	</head>
+	<body>
+		<!-- Nav Needs to have this
+    	<a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+    	-->
+    	<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a class="nav-link nav-link-highlighted js-scroll-trigger" href="#home-section">Home</a>
+	    	<a class="nav-link js-scroll-trigger" href="#our-work-section">Our Work</a>
+	    	<a class="nav-link js-scroll-trigger" href="#about-section">About</a>
+	    	<a class="nav-link js-scroll-trigger" href="#contact-section"><button class="contact-button">Contact</button></a>
+		</div>
+
+		<!-- Use any element to open the sidenav -->
+		<!--span onclick="openNav()"><button>asdasdasd</button></span-->
+    	
+		<div id="main">
+			<div id="header">
+    			<div class="container">
+					<div class="row">
+					    <div id="header-logo" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+					    	<!--img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1280px-Google_2015_logo.svg.png" alt="Exypni"/-->
+					    	<span class="logo">e<span class="red">xy</span>pni</span>
+					    </div>
+					    <div id="header-nav" class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+					    	<div id="nav-links">
+						    	<a class="nav-link nav-link-highlighted js-scroll-trigger" href="#home-section">Home</a>
+						    	<a class="nav-link js-scroll-trigger" href="#our-work-section">Our Work</a>
+						    	<a class="nav-link js-scroll-trigger" href="#about-section">About</a>
+						    	<a class="nav-link js-scroll-trigger" href="#contact-section"><button class="contact-button">Contact</button></a>
+				    		</div>
+
+					    	<span id="sidenav-toggle" onclick="openNav()"><button class="our-work-button"><i class="fa fa-bars"></i></button></span>
+					    </div>
+					</div>
+				</div>
+	    	</div>
+
+	    	<div id="header-blur">
+
+	    	</div>
+
+    	<div id="main-container">
+    		<canvas id="canvas">
+			</canvas>
+	    	<div id="home-section" class="section">
+	    		
+	    		<div id="home-container" class="container">
+	    			<div id="home-title">
+	    				Machine Learning and Blockchain shop.
+	    				<!--We specialize in building full-stack solutions for your needs with a heavy focus on the use of Machine Learning and Deep Learning techniques to give you a competitive advantage.-->
+	    			</div>
+	    			<div id="home-features">
+    					<span class="home-feature">We like to solve complex real world problems using machine learning and blockchain in innovative ways.</span>
+	    			</div>
+	    			<div id="home-buttons">
+	    				<div class="row">
+						    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 right-align">
+						    	<a class="nav-link js-scroll-trigger" href="#contact-section"><button class="get-in-touch-button">Get in touch</button></a>
+						    </div>
+						   	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 left-align">
+						   		<a class="nav-link js-scroll-trigger" href="#our-work-section"><button class="our-work-button">Our work</button></a>
+						   	</div>
+					    </div>
+					</div>
+
+    			</div>
+    		</div>
+	    	
+	    	<div id="our-work-section" class="section">
+	    		<div class="container section-header">
+	    			<span class="section-title">What we do</span>
+	    		</div>
+
+	    		<div class="container section-content">
+	    			<div class="row">
+	    				<div class="work-group">
+						    <div class="col-md-1 col-lg-1 col-xl-1 work-explanation">
+						    	<div class="circle"><i class="fa fa-brain"></i></div>
+						    </div>
+						    <div class="col-md-5 col-lg-5 col-xl-5 work-explanation">
+						    	<div class="work-title">Machine Learning</div>
+						    	<p class="work-text">
+						    		We specialize in building full-stack solutions for your needs with a heavy focus on the use of Machine Learning and Deep Learning techniques to give you a competitive advantage.
+						    	</p>
+						    </div>
+						</div>
+						<div class="work-group">
+						   	<div class="col-md-1 col-lg-1 col-xl-1 work-explanation">
+						   		<div class="circle"><i class="fa fa-th"></i></div>
+						   	</div>
+						   	<div class="col-md-5 col-lg-5 col-xl-5 work-explanation">
+						   		<div class="work-title">Blockchain</div>
+						    	<p class="work-text">
+						    		Our team is able to bring the full power of blockchain to build the decentralized apps that your company needs. 
+						    	</p>
+						    </div>
+						</div>
+				    </div>
+
+				    <div class="row">
+				    	<div class="work-group">
+						    <div class="col-md-1 col-lg-1 col-xl-1 work-explanation">
+						    	<div class="circle"><i class="fa fa-project-diagram"></i></div>
+						    </div>
+						    <div class="col-md-5 col-lg-5 col-xl-5 work-explanation">
+						    	<div class="work-title">Deep Learning</div>
+						   		<p class="work-text">
+						    			Within Machine Learning, we have tons of experience with training neural network, both recurrent and convolutional.
+						    	</p>
+						    	
+						    </div>
+						</div>
+						<div class="work-group">
+						   	<div class="col-md-1 col-lg-1 col-xl-1 work-explanation">
+						   		<div class="circle"><i class="fa fa-th-large"></i></div>
+						   	</div>
+						   	<div class="col-md-5 col-lg-5 col-xl-5 work-explanation">
+						   		<div class="work-title">Truffle</div>
+						    	<p class="work-text">
+						    		We currently have experience working with the Truffle framework that helps us build Dapps with the Ethereum blockchain as its foundations. 
+						    	</p>
+						    </div>
+						</div>
+				    </div>
+
+				    <div class="row">
+				    	<div class="work-group">
+						    <div class="col-md-1 col-lg-1 col-xl-1 work-explanation">
+						    	<div class="circle"><i class="fa fa-laptop-code"></i></div>
+						    </div>
+						    <div class="col-md-5 col-lg-5 col-xl-5 work-explanation">
+						    	<div class="work-title">Tensor Flow</div>
+						    	<p class="work-text">
+						    		Our team has tons of experience working with Google's TensorFlow in order to achieve the perfect neural network to solve your problems.
+						    	</p>
+						    </div>
+						</div>
+						<div class="work-group">
+						   	<div class="col-md-1 col-lg-1 col-xl-1 work-explanation">
+						   		<div class="circle"><i class="fa fa-square"></i></div>
+						   	</div>
+						   	<div class="col-md-5 col-lg-5 col-xl-5 work-explanation">
+						   		<div class="work-title">Full-stack</div>
+						    	<p class="work-text">
+						    		We provide end to end solutions. This means that even though we specialize in the use of Machine Learning and Deep Learning techniques as well as on Blockchain solutions, we have experience developing full-stack sofware, making us the perfect fit for your company.
+						    	</p>
+						    </div>
+						</div>
+				    </div>
+	    		</div>
+	    	</div>
+	    </div>
+
+	    <div id="last-sections-container">
+    		<div id="about-section" class="section">
+				<div class="container section-header">
+	    			<span class="section-title">About us</span>
+	    		</div>
+	    		<div class="container about-us-content">
+	    			<div class="about-us-description">
+	    				Nothing defines us better than our mission statement:
+	    			</div>
+	    			<div class="about-us-mission-statement">
+	    				"Create amazing software to solve complex real world problems"
+	    			</div>
+
+	    			<div class="about-get-in-touch">
+	    				<a class="nav-link js-scroll-trigger" href="#contact-section"><button class="get-in-touch-button">Get in touch</button></a>
+	    			</div>
+	    		</div>
+			</div>
+
+
+    		<div id="contact-section" class="section">
+    			<div class="container section-header">
+    				<span class="section-title">Get in touch</span>
+    			</div>
+
+    			<div class="container contact-content">
+    				<div class="row">
+					    <div class="col-md-6 col-lg-6 col-xl-6">
+				    		<form action="https://formspree.io/hello@exypni.com" class="form-horizontal" method="POST">
+							    <div class="form-group">
+							    	<div class="input-label">
+							    		<label class="control-label" for="name">Name:</label>
+							    	</div>
+							    	<div class="input-field">
+							    		<input type="text" id="name" class="form-control" name="name" placeholder="Your name">
+							    	</div>
+								</div>
+								<div class="form-group">
+									<div class="input-label">
+										<label class="control-label" for="email">Email:</label>
+									</div>
+									<div class="input-field">
+							    		<input type="email" id="email" class="form-control" name="email" placeholder="Your email">
+							    	</div>
+							    </div>
+
+							    <div class="form-group">
+									<div class="input-label">
+										<label class="control-label" for="phone">Phone (Optional):</label>
+									</div>
+									<div class="input-field">
+							    		<input type="phone" id="phone" class="form-control" name="phone" placeholder="Your Phone (Optional)">
+							    	</div>
+							    </div>
+							    	
+						    	<input type="hidden" name="_subject" value="Website contact" />
+							    
+							    <div class="form-group">
+							    	<div class="input-label">
+							    		<label class="control-label" for="message">Message (Optional):</label>
+							    	</div>
+							    	<textarea name="message" id="message" class="form-control" placeholder="Tell us a bit about yourself and your project :)."></textarea>
+							    </div>
+							    
+							    <input type="text" name="_gotcha" style="display:none" />
+							    
+							    <div class="form-group">
+							    	<div class="input-button">
+							    		<button type="submit" class="send-button">Send</button>
+							    	</div>
+							    </div>
+							
+							</form>
+		
+					    </div>
+					    <div class="col-md-6 col-lg-6 col-xl-6 center-align">
+					    	<div class="contact-items-container">
+						    	<div class="contact-clarification">
+						    		Drop us a line by email
+						    	</div>
+						    	<div class="contact-item">
+						    		<i class="fa fa-envelope"></i> hello@exypni.com
+						    	</div>
+
+						    	<div class="contact-clarification">
+						    		Or just call us
+						    	</div>
+						    	<div class="contact-item">
+						    		<i class="fa fa-phone"></i> (+598) 99 567 322
+						    	</div>
+
+						    	<div class="contact-clarification">
+						    		Or simply visit us
+						    	</div>
+						    	<div class="contact-item">
+						    		<a href="https://www.google.com.uy/maps/place/R%C3%ADo+Negro+1394,+11100+Montevideo/data=!4m2!3m1!1s0x959f802d4044544b:0x87ab7d1ccc394fdd?sa=X&ved=2ahUKEwjfiLHs4L7dAhUBFZAKHdhoB4IQ8gEwAHoECAMQAQ" target="_blank">
+						    			<i class="fa fa-map-marker-alt"></i> Río Negro 1394 office 701, Montevideo, Uruguay
+						    		</a>
+						    	</div>
+						    	<br>
+						    	<br>
+						    	<br>
+						    </div>
+					    </div>
+					</div>
+
+    			</div>
+
+    		</div>
+
+	    </div>
+	</div>
+
+
+
+   
+
+
+		<!-- One page scroll -->
+		<script src="scripts/scrolling-nav.js"></script>
+
+		<!-- Stars -->
+		<script src="scripts/home-stars.js"></script>
+
+		<!-- Active links -->
+		<script src="scripts/active-links.js"></script>
+
+		<!-- Sidenav -->
+		<script src="scripts/sidenav.js"></script>
+	</body>
+</html>
