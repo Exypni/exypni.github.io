@@ -12,7 +12,8 @@ var ball = {
       vy: 0,
       r: 0,
       alpha: 1,
-      phase: 0
+      phase: 0,
+      letter: 'A'
    },
    ball_color = {
        r: 93,
@@ -45,6 +46,10 @@ var ball = {
       vy: 0,
       r: 0,
       type: 'mouse'};
+
+let letters = ['Α', 'α', 'Β', 'β', 'Γ', 'γ', 'Δ', 'δ', 'Ε', 'ε', 'Ζ', 'ζ', 'Η', 'η', 'Θ', 'θ', 'Ι', 'ι',
+     'Κ', 'κ', 'Λ', 'λ', 'Μ', 'μ', 'Ν', 'ν', 'Ξ', 'ξ', 'Ο', 'ο', 'Π', 'π', 'Ρ', 'ρ', 'Σ', 'σ', 'ς', 'Τ',
+      'τ', 'Υ', 'υ', 'Φ', 'φ', 'Χ', 'χ', 'Ψ', 'ψ', 'Ω', 'ω'];
 
 // Random speed
 function getRandomSpeed(pos){
@@ -82,6 +87,9 @@ function getRandomBall(){
     radius = R;
     radius = randomIntBetween(1, 4);
 
+    letterIndex = randomIntBetween(0, letters.length - 1);
+    l = letters[letterIndex];
+
     switch(pos){
         case 'top':
             return {
@@ -91,7 +99,8 @@ function getRandomBall(){
                 vy: getRandomSpeed('top')[1],
                 r: radius,
                 alpha: 1,
-                phase: randomNumFrom(0, 10)
+                phase: randomNumFrom(0, 10),
+                letter: l
             }
             break;
         case 'right':
@@ -102,7 +111,8 @@ function getRandomBall(){
                 vy: getRandomSpeed('right')[1],
                 r: radius,
                 alpha: 1,
-                phase: randomNumFrom(0, 10)
+                phase: randomNumFrom(0, 10),
+                letter: l
             }
             break;
         case 'bottom':
@@ -113,7 +123,8 @@ function getRandomBall(){
                 vy: getRandomSpeed('bottom')[1],
                 r: radius,
                 alpha: 1,
-                phase: randomNumFrom(0, 10)
+                phase: randomNumFrom(0, 10),
+                letter: l
             }
             break;
         case 'left':
@@ -124,7 +135,8 @@ function getRandomBall(){
                 vy: getRandomSpeed('left')[1],
                 r: radius,
                 alpha: 1,
-                phase: randomNumFrom(0, 10)
+                phase: randomNumFrom(0, 10),
+                letter: l
             }
             break;
     }
@@ -141,12 +153,16 @@ function randomIntBetween(min,max)
 // Draw Ball
 function renderBalls(){
     Array.prototype.forEach.call(balls, function(b){
-       if(!b.hasOwnProperty('type')){
+      if(!b.hasOwnProperty('type')){
+           //ctx.fillStyle = 'rgba('+ball_color.r+','+ball_color.g+','+ball_color.b+','+b.alpha+')';
+           //ctx.beginPath();
+           //ctx.arc(b.x, b.y, b.r, 0, Math.PI*2, true);
+           //ctx.closePath();
+           //ctx.fill();
            ctx.fillStyle = 'rgba('+ball_color.r+','+ball_color.g+','+ball_color.b+','+b.alpha+')';
-           ctx.beginPath();
-           ctx.arc(b.x, b.y, b.r, 0, Math.PI*2, true);
-           ctx.closePath();
-           ctx.fill();
+           ctx.font = (b.r * 8) + 'px Roboto';
+           ctx.textBaseline = 'alphabetic';
+           ctx.fillText(b.letter, b.x, b.y);
        }
     });
 }
@@ -158,10 +174,10 @@ function updateBalls(){
     var new_balls = [];
     Array.prototype.forEach.call(balls, function(b){
         reduce_movement = randomIntBetween(8, 100);
-        reduce_movement = (1/Math.pow(b.r, 2) * 1.0) * 100.0;
+        //reduce_movement = (1/Math.pow(b.r, 2) * 1.0) * 100.0;
 
-        b.x += b.vx + (mouse_ball.x - old_mouse_ball.x) / reduce_movement;
-        b.y += b.vy + (mouse_ball.y - old_mouse_ball.y) / reduce_movement;
+        b.x += b.vx// + (mouse_ball.x - old_mouse_ball.x) / reduce_movement;
+        b.y += b.vy// + (mouse_ball.y - old_mouse_ball.y) / reduce_movement;
         
         if(b.x > -(50) && b.x < (can_w+50) && b.y > -(50) && b.y < (can_h+50)){
            new_balls.push(b);
@@ -245,15 +261,19 @@ function render(){
 // Init Balls
 function initBalls(num){
     for(var i = 1; i <= num; i++){
-        balls.push({
-            x: randomSidePos(can_w),
-            y: randomSidePos(can_h),
-            vx: getRandomSpeed('top')[0],
-            vy: getRandomSpeed('top')[1],
-            r: R,
-            alpha: 1,
-            phase: randomNumFrom(0, 10)
-        });
+      letterIndex = randomIntBetween(0, letters.length - 1);
+      l = letters[letterIndex];
+
+      balls.push({
+          x: randomSidePos(can_w),
+          y: randomSidePos(can_h),
+          vx: getRandomSpeed('top')[0],
+          vy: getRandomSpeed('top')[1],
+          r: R,
+          alpha: 1,
+          phase: randomNumFrom(0, 10),
+          letter: l
+      });
     }
 }
 // Init Canvas
