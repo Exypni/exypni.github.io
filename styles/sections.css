@@ -19,7 +19,6 @@ canvas {
 }
 
 #home-section {
-	padding-top:80px;
 	width: 100%;
 	height: 100vh;
 }
@@ -235,9 +234,20 @@ canvas {
 }
 
 #home-container {
-	padding-top: 100px;
 	width: 100%;
 
+}
+
+.parent {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+}
+
+.vertically-centered {
+	display: table-cell;
+    vertical-align: middle;
 }
 
 #home-title {
