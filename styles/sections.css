@@ -242,12 +242,12 @@ canvas {
 	display: table;
 	margin-left: auto;
 	margin-right: auto;
-	height: 100%;
+	height: 100vh;
 }
 
 .vertically-centered {
 	display: table-cell;
-    vertical-align: middle;
+    	vertical-align: middle;
 }
 
 #home-title {
